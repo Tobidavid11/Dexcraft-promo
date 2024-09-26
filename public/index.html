@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dexcraft || Design.Develop.Disrupt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+    <link rel="stylesheet" href="styles.css">
+    <!-- Firebase App (the core Firebase SDK) -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js"></script> -->
+    <!-- Firebase Firestore -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js"></script> -->
+</head>
+<body>
+    <main class="main-container">
+      <div class="navbar-container">
+        <img src="./assets/dexcraft.png" alt="Dexcraft">
+        <a href="mailto:adesinasurprise2006@gmail.com?subject=Help%20Request&body=Please%20describe%20your%20issue%20here.">Need Help?</a>
+      </div>
+
+      <div class="hero-section">
+        <h1>Welcome to Dexcraft Promo</h1>
+        <p>Refer your friends and family to Dexcraft and earn rewards instantly!</p>
+       <a href="#referral-form">
+        <button>GET STARTED</button>
+       </a>
+      </div>
+
+      <section id="how-it-works">
+        <h1 class="h1">How it works</h1>
+        <div class="steps-container">
+          <div class="steps">
+            <i class="bi bi-people-fill"></i>
+            <p>Connect Dexcraft with your friends and family and earn <span class="Amount">₦2,000</span> for each referral.</p>
+          </div>
+          <div class="steps">
+            <i class="bi bi-cash-stack"></i>
+            <p>Refer 2 people and earn <span class="Amount"> ₦4,000</span> or refer 3 people to get <span class="Amount">#5,000</span>.</p>
+          </div>
+          <div class="steps">
+            <i class="bi bi-gift-fill"></i>
+            <p>Get your unique referral code and start sharing to win rewards.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="Questions-section" class="Frequently Asked Questions">
+        <h1 class="h1">Frequently Asked Questions</h1>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                What is Dexcraft?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Dexcraft is a creative powerhouse built on the idea of designing, developing, and disrupting. It’s a company where cutting-edge design meets innovation in web development. From stunning graphics to sleek, functional websites, Dexcraft offers businesses a fresh take on how their brand should look and feel.
+                At its core, Dexcraft is about more than just creating websites or logos—it’s about shaking up the industry. We don’t settle for ordinary. Our mission is to deliver designs that make a lasting impression and build web experiences that not only engage but set new standards.
+                Whether it’s brand identity, custom animations, or web development, Dexcraft is where creativity and technology come together to disrupt the norm. It’s all about pushing boundaries and crafting something unforgettable.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                How do I earn from Dexcraft?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                At Dexcraft, we believe in rewarding those who help us grow! When you refer friends, family, or colleagues to Dexcraft, and they choose us for their design or development projects, you earn a cash reward. <br>
+                <strong>Refer Someone:</strong> Share Dexcraft with your network. The more people you refer, the better! <br>
+                <strong>We Deliver:</strong> Once we complete a project for your referral, you’ll automatically receive your reward. <br>
+                <strong>Earn Money:</strong> For each successful referral, you earn a cash bonus. The more people you refer, the more you earn—it’s that simple!
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                How do I make use of the referral card?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Share Your Card:</strong> After you refer someone to Dexcraft, you’ll receive a designated referral card with a unique code via email. This card is your key to earning rewards. <br>
+                <strong>When Your Referral Contacts Us:</strong> If the person you referred reaches out to Dexcraft for a project—whether it's design, development, or any other service—we'll ask them if they were referred. <br>
+                <strong>They Present Your Card:</strong> Once your referral confirms they were referred by you, they will present your referral card with the unique code. This helps us verify that you’re the one who made the connection.  <br>
+                <strong>You Get Paid:</strong> After the project is successfully completed, we use the referral card details to ensure you receive your cash reward. Your referral card’s code is linked to your information stored securely in our system, so we know exactly where to send the payment. <br>
+                So, simply share your referral card, let Dexcraft do the work, and watch the rewards roll in!
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="referral-form">
+        <h1>Get Your Referral Card</h1>
+        <p>Fill out the form below to get your unique referral card for those you refer.</p>
+        <form id="referralForm" class="form-container">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your full name">
+          <label for="account">Account Number</label>
+          <input type="text" id="accountNumber" name="account" required placeholder="Enter your account number">
+          <label for="bank">Bank Name</label>
+          <input type="text" id="bank" name="bank" required placeholder="Enter your bank name">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="Enter your email">
+          <button type="submit">Submit</button>
+        </form>
+        <p id="successMessage" style="display:none; color: green;">Your request has been submitted! You will receive your referral card within 24 hours.</p>
+      </section>
+
+      <footer>
+        <p>© Dexcraft 2024. All rights Reserved.</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/Dexcraft24"><i class="bi bi-facebook"></i></a>
+          <a href="https://x.com/Tobidavis1234"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.instagram.com/dex_craft24?igsh=ZThpbW55MHcwMzM2"><i class="bi bi-instagram"></i></a>
+        </div>
+      </footer>
+    </main>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+    ></script>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,303 @@
+:root {
+    --primary-color: rgb(0, 81, 255);
+    --background-color: #02163f;
+    --light: #fff;
+    --tetiary-color: rgb(60, 112, 255);
+    --shade: #000;
+    --text-color: #afadad;
+    --font-family: sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--light);
+    font-family: var(--font-family);
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, rgb(4, 55, 163), rgb(3, 32, 88));
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+.navbar-container a{
+    color: var(--light);
+    text-decoration: none;
+}
+.navbar-container a:active{
+    color: var(--primary-color);
+}
+
+.hero-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-image: linear-gradient(#0d5af36e, #02163fb6), url("./assets/sign-up bg-1.jpg");
+    color: var(--light);
+}
+
+.hero-section h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.hero-section button {
+    padding: 10px;
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 4px;
+    color: var(--light);
+    margin-top: 40px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.hero-section button:hover {
+    background-color: #03205a;
+}
+
+#how-it-works {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.steps {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.steps i {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.steps p {
+    font-size: 14px;
+    color: #e6e1e1;
+}
+
+.Amount {
+    color: var(--tetiary-color);
+    font-family: Helvetica;
+}
+
+.steps:hover {
+    transform: scale(1.05);
+}
+.h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto;
+}
+#Questions-section button {
+font-weight: bold;
+color: var(--primary-color);
+}
+#referral-form {
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+#referral-form h1 {
+    font-size: 40px;
+    margin: 30px auto;
+}
+
+#referral-form p {
+    color: #ccc;
+    margin: 20px auto;
+    font-size: 16px;
+}
+
+.form-container {
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    box-shadow: 1px 1px 10px rgb(0, 81, 255);
+}
+
+#referral-form form label {
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+#referral-form form input {
+    padding: 10px;
+    border-radius: 2px;
+    border: 1.5px solid rgb(0, 81, 255);
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    color: var(--light);
+}
+
+input::placeholder {
+    color: #ddd;
+}
+
+#referral-form form button {
+    padding: 10px;
+    background-color: var(--tetiary-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--light);
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+#referral-form form button:hover {
+    background-color: var(--primary-color);
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--shade);
+    color: var(--light);
+}
+
+.social-icons {
+    margin: 10px 0px;
+}
+
+.social-icons a {
+    color: var(--light);
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 1rem;
+    }
+
+    .hero-section {
+        padding: 40px 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 35px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+
+    .steps-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .steps i {
+        font-size: 40px;
+    }
+
+    .steps p {
+        font-size: 12px;
+    }
+
+    #referral-form h1 {
+        font-size: 30px;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    #referral-form form input {
+        padding: 8px;
+    }
+
+    #referral-form form button {
+        padding: 8px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 28px;
+    }
+
+    .hero-section p {
+        font-size: 14px;
+    }
+
+    .steps-container {
+        gap: 5px;
+    }
+
+    .steps i {
+        font-size: 35px;
+    }
+
+    .steps p {
+        font-size: 11px;
+    }
+
+    #referral-form h1 {
+        font-size: 24px;
+    }
+
+    #referral-form p {
+        font-size: 14px;
+    }
+
+    .form-container {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+    }
+}
