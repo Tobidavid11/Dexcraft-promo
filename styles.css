@@ -1,11 +1,12 @@
 :root {
-    --primary-color: rgb(0, 81, 255);
-    --background-color: #02163f;
-    --light: #fff;
-    --tetiary-color: rgb(60, 112, 255);
-    --shade: #000;
-    --text-color: #afadad;
-    --font-family: sans-serif;
+    --primary-color: #1E88E5; /* Vibrant Blue */
+    --secondary-color: #F4511E; /* Green */
+    --background-color: #1B1B1B; /* Dark Gray for background */
+    --light: #F5F5F5; /* Light for text and UI elements */
+    --accent-color: #b83006; /* Orange for accents */
+    --shade: #121212; /* Deep Gray for sections */
+    --text-color: #D3D3D3; /* Light gray for text */
+    --font-family: 'Poppins', sans-serif; /* Modern font */
 }
 
 * {
@@ -25,144 +26,163 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    background: linear-gradient(135deg, rgb(4, 55, 163), rgb(3, 32, 88));
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    background: var(--primary-color);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
-.navbar-container a{
+.navbar-container span{
+    font-weight: bold;
+    font-size: 25px;
+}
+.navbar-container a {
     color: var(--light);
     text-decoration: none;
-}
-.navbar-container a:active{
-    color: var(--primary-color);
+    font-weight: 500;
 }
 
+.navbar-container a:active {
+    color: var(--accent-color);
+}
 
 .hero-section {
     text-align: center;
     padding: 80px 20px;
-    background-image: linear-gradient(#0d5af36e, #02163fb6), url("./assets/sign-up bg-1.jpg");
+    background-image: linear-gradient(#00000099, #00000099), url("./assets/sign-up bg-1.jpg");
     color: var(--light);
 }
 
 .hero-section h1 {
     font-size: 50px;
     margin-bottom: 20px;
+    color: var(--primary-color);
 }
 
 .hero-section p {
     font-size: 18px;
     margin-top: 5px;
+    color: var(--text-color);
 }
 
 .hero-section button {
-    padding: 10px;
-    background-color: var(--background-color);
+    padding: 12px 20px;
+    background-color: var(--secondary-color);
     border: none;
     border-radius: 4px;
     color: var(--light);
     margin-top: 40px;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .hero-section button:hover {
-    background-color: #03205a;
+    background-color: var(--accent-color);
 }
 
 #how-it-works {
     padding: 60px 20px;
     text-align: center;
+    background-color: var(--shade);
 }
 
 .steps-container {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .steps {
     background-color: var(--background-color);
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 1px 1px 10px rgb(0, 81, 255);
-    flex: 1;
-    margin: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px 0;
     text-align: center;
     transition: transform 0.2s ease;
 }
 
 .steps i {
-    font-size: 50px;
+    font-size: 48px;
     margin-bottom: 20px;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .steps p {
-    font-size: 14px;
-    color: #e6e1e1;
+    font-size: 16px;
+    color: var(--text-color);
 }
 
 .Amount {
-    color: var(--tetiary-color);
-    font-family: Helvetica;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 .steps:hover {
     transform: scale(1.05);
 }
-.h1{
+
+.h1 {
+    margin: 15px auto;
+    color: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 15px auto;
 }
-#Questions-section button {
+#Questions-section .accordion-button:focus{
+box-shadow: none;
+background-color: rgba(0, 0, 0, 0.1);
 font-weight: bold;
-color: var(--primary-color);
+color: #000;
+}
+#Questions-section .accordion-button:current{
+    background-color: none;
 }
 #referral-form {
     padding: 50px 20px;
     text-align: center;
-    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: var(--shade);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 #referral-form h1 {
     font-size: 40px;
     margin: 30px auto;
+    color: var(--light);
 }
 
 #referral-form p {
-    color: #ccc;
+    color: #CCC;
     margin: 20px auto;
     font-size: 16px;
 }
 
 .form-container {
     max-width: 500px;
-    height: auto;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    box-shadow: 1px 1px 10px rgb(0, 81, 255);
+    padding: 30px;
+    background-color: var(--background-color);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
 }
 
 #referral-form form label {
-    text-align: left;
     font-size: 16px;
     font-weight: bold;
-    color: #ccc;
+    color: var(--light);
 }
 
 #referral-form form input {
-    padding: 10px;
-    border-radius: 2px;
-    border: 1.5px solid rgb(0, 81, 255);
-    background-color: transparent;
-    outline: none;
-    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1.5px solid var(--primary-color);
+    background-color: var(--background-color);
     color: var(--light);
+    width: 100%;
+    outline: none;
+    margin-bottom: 15px;
 }
 
 input::placeholder {
@@ -170,29 +190,30 @@ input::placeholder {
 }
 
 #referral-form form button {
-    padding: 10px;
-    background-color: var(--tetiary-color);
+    padding: 12px;
+    background-color: var(--secondary-color);
     border: none;
     border-radius: 5px;
     color: var(--light);
     cursor: pointer;
-    margin-bottom: 15px;
+    font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
 #referral-form form button:hover {
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
 }
 
 footer {
     padding: 20px;
     text-align: center;
     background-color: var(--shade);
+    border-top: 1px solid var(--primary-color);
     color: var(--light);
 }
 
 .social-icons {
-    margin: 10px 0px;
+    margin: 10px 0;
 }
 
 .social-icons a {
@@ -202,7 +223,7 @@ footer {
 }
 
 .social-icons a:hover {
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 /* Mobile Responsiveness */
@@ -219,21 +240,13 @@ footer {
         font-size: 35px;
     }
 
-    .hero-section p {
-        font-size: 16px;
-    }
-
     .steps-container {
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
     }
 
-    .steps i {
-        font-size: 40px;
-    }
-
-    .steps p {
-        font-size: 12px;
+    .steps {
+        flex-basis: 100%;
     }
 
     #referral-form h1 {
@@ -241,15 +254,15 @@ footer {
     }
 
     .form-container {
-        padding: 15px;
+        padding: 20px;
     }
 
     #referral-form form input {
-        padding: 8px;
+        padding: 10px;
     }
 
     #referral-form form button {
-        padding: 8px;
+        padding: 10px;
     }
 
     footer {
@@ -266,32 +279,16 @@ footer {
         font-size: 28px;
     }
 
-    .hero-section p {
-        font-size: 14px;
-    }
-
-    .steps-container {
-        gap: 5px;
-    }
-
     .steps i {
         font-size: 35px;
     }
 
     .steps p {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     #referral-form h1 {
         font-size: 24px;
-    }
-
-    #referral-form p {
-        font-size: 14px;
-    }
-
-    .form-container {
-        padding: 10px;
     }
 
     footer {
