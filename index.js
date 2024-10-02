@@ -1,12 +1,18 @@
-import { db } from './firebase.js'; // Only import db since it's used
+import { db } from './firebase.js';
 import { collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
 
 // Reference to the referral form
 const referralForm = document.getElementById('referralForm');
 
-// Add an event listener to the form
-referralForm.addEventListener('submit', async (e) => {
-  e.preventDefault(); // Prevent default form submission
+// Function to handle form submission
+async function handleSubmit(event) {
+  event.preventDefault(); // Prevent default form submission
+
+  const submitButton = event.target.querySelector('button[type="submit"]');
+
+  // Change button text to "Submitting..." and disable the button
+  submitButton.textContent = 'Submitting...';
+  submitButton.disabled = true; 
 
   const name = document.getElementById('name').value;
   const accountNumber = document.getElementById('accountNumber').value;
@@ -14,21 +20,29 @@ referralForm.addEventListener('submit', async (e) => {
   const email = document.getElementById('email').value;
 
   try {
-    // Log the data you're about to send
-    console.log("Submitting data:", { name, accountNumber, bank, email });
-
-    // Adding document to Firestore
+    // Add data to Firestore
     const docRef = await addDoc(collection(db, "referrals"), {
       name,
       accountNumber,
       bank,
       email,
-      timestamp: serverTimestamp() // Use Firestore's server timestamp
+      timestamp: serverTimestamp(),
     });
 
     console.log("Document written with ID: ", docRef.id);
-    document.getElementById('successMessage').style.display = 'block'; // Show success message
-  } catch (e) {
-    console.error("Error adding document: ", e);
+
+    // Redirect to success.html after successful submission
+    setTimeout(() => {
+      window.location.href = 'success.html'; // Redirect to success page
+    }, 1500); // Simulate slight delay before redirection
+
+  } catch (error) {
+    console.error("Error adding document: ", error);
+    // Re-enable the button and reset the text
+    submitButton.textContent = 'Submit';
+    submitButton.disabled = false;
   }
-});
+}
+
+// Add the event listener for the form
+referralForm.addEventListener('submit', handleSubmit);

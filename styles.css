@@ -131,6 +131,12 @@ body {
     align-items: center;
     justify-content: center;
 }
+.accordion {
+    max-width: 800px; /* Set a maximum width */
+    margin: 0 auto; /* Center the accordion horizontally */
+    display: block;
+    padding: 20px; /* Optional padding */
+}
 #Questions-section .accordion-button:focus{
 box-shadow: none;
 background-color:var(--primary-color);
@@ -208,6 +214,30 @@ input::placeholder {
 #referral-form form button:hover {
     background-color: var(--accent-color);
 }
+
+/* Styling the select (dropdown) */
+#referral-form form select {
+    padding: 12px;
+    border-radius: 4px;
+    border: 1.5px solid var(--primary-color);
+    background-color: var(--background-color);
+    color: var(--light);
+    width: 100%;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+#referral-form form select option {
+    color: var(--shade);
+}
+
+/* Styling the loading spinner */
+#loading {
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
 
 footer {
     padding: 20px;
