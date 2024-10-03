@@ -225,11 +225,14 @@ input::placeholder {
     width: 100%;
     outline: none;
     margin-bottom: 20px;
+
 }
 
 #referral-form form select option {
-    color: var(--shade);
+    color: var(--);
+    background-color: #b83006;
 }
+
 
 /* Styling the loading spinner */
 #loading {
